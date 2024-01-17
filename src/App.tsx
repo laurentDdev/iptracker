@@ -76,7 +76,7 @@ function App() {
                     </span>
                 </div>
             </header>
-            <div className={"bg-white w-1/3 py-7 translate-y-[-50%] translate-x-[-50%] absolute inset-y-50 left-2/4 z-10 px-4 rounded-lg"}>
+            <div className={"bg-white xl:w-2/4 2xl:w-2/5  py-7 translate-y-[-50%] translate-x-[-50%] absolute inset-y-50 left-2/4 z-10 px-4 rounded-lg"}>
                 <div className={"flex justify-start items-center gap-10"}>
                     <div className={"flex flex-col items-start gap-2"}>
                         <span className={"text-gray-500 font-bold uppercase"}>IP ADDRESS</span>
