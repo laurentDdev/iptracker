@@ -46,7 +46,7 @@ function App() {
 
     const getData = async () => {
 
-            const { data } = await axios.get(`http://ip-api.com/json/${host}`)
+            const { data } = await axios.get(`https://api.ipgeolocation.io/ipgeo?apiKey=${import.meta.env.VITE_GEO_API}&ip=${host}`)
             console.log(data)
             if (data.status === 'fail') {
                 return
@@ -54,9 +54,9 @@ function App() {
             if (data) {
                 setPosition({latitude: parseFloat(data.lat), longitude: parseFloat(data.lon)})
                 setDataHost({
-                    ip: data.query,
-                    location: `${data.city}, ${data.country}`,
-                    timezone: `UTC${data.timezone}`,
+                    ip: data.ip,
+                    location: `${data.country_name}, ${data.city}`,
+                    timezone: `UTC${data.time_zone.name}`,
                     isp: data.isp
                 })
             }
