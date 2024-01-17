@@ -52,7 +52,7 @@ function App() {
                 return
             }
             if (data) {
-                setPosition({latitude: parseFloat(data.lat), longitude: parseFloat(data.lon)})
+                setPosition({latitude: parseFloat(data.latitude), longitude: parseFloat(data.longitude)})
                 setDataHost({
                     ip: data.ip,
                     location: `${data.country_name}, ${data.city}`,
